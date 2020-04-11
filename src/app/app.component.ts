@@ -6,9 +6,11 @@ import { Model, TodoItem } from './model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   model = new Model();
   isDisplay = false;
+
   getName() {
     return this.model.user;
   }
@@ -25,5 +27,4 @@ export class AppComponent {
       this.model.items.push(new TodoItem(value, false));
     }
   }
-
 }
